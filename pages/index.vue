@@ -37,7 +37,7 @@ export default {
       bannerImage: academyImage,
       tiles: [
         {
-          title: 'A tile',
+          title: 'A tile Bruno',
           text: 'This is a reusable component.',
         },
         {
