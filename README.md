@@ -1,20 +1,59 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Hack Day 1 Boilerplate
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Build Setup
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+```bash
+# install dependencies
+$ npm install
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# build the application and generate every route as a HTML file (used for static hosting).
+$ npm run generate
+
+# generate and deploy static site to S3 (need to specify bucket in deploy.sh)
+$ npm run deploy
+```
+
+## Use the provided APIs
+
+### Retrieving images
+
+Perform a GET Request
+
+```
+https://ck7f3w6408.execute-api.eu-west-1.amazonaws.com/IL/teams/{teamName}/files
+```
+
+Response will be a list of images
+
+```js
+{
+  "data": [
+    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/david-marcu-78A265wPiO4-unsplash.jpg",
+    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/jay-mantri-TFyi0QOx08c-unsplash.jpg",
+    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg",
+    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/mountain-landscape-2031539_1280.jpg",
+    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/niko-photos-tGTVxeOr_Rs-unsplash.jpg",
+    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/road-1072823_1280.jpg",
+    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/sean-o-KMn4VEeEPR8-unsplash.jpg"
+  ]
+}
+```
+
+### Uploading image
+
+Perform a POST Request, where the body is a base64 encoded image
+
+```
+https://ck7f3w6408.execute-api.eu-west-1.amazonaws.com/IL/teams/{teamName}/files/{fileName}
+```
+
+Response will be an object with a key of success, where the value will indicate whether your upload succeeded or not
+
+```js
+{
+  "success": true
+}
+```
