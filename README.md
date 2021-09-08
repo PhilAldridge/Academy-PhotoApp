@@ -12,6 +12,8 @@ Click Generate git credentials
 
 COPY THE PASSWORD
 
+Use the HTTP URL to clone locally (or use Clone in VS Code if you know how...)
+
 ## Build Setup
 
 ```bash
