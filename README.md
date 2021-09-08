@@ -4,7 +4,7 @@
 Click on master, and in the dropdown create a new branch named after your teamName
 
 ##Clone Repository
-In your neww branch, click Clone
+In your new branch, click Clone
 
 Use HHTPS
 
