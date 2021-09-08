@@ -5,8 +5,11 @@ Click on master, and in the dropdown create a new branch named after your teamNa
 
 ##Clone Repository
 In your neww branch, click Clone
+
 Use HHTPS
+
 Click Generate git credentials
+
 COPY THE PASSWORD
 
 ## Build Setup
