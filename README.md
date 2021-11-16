@@ -1,12 +1,12 @@
 # Hack Day 1 Boilerplate
 
 ## Branch Repository
-Click on master, and in the dropdown create a new branch named after your teamName
+Click on master, and in the dropdown create a new branch named after your team name
 
 ##Clone Repository
 In your new branch, click Clone
 
-Use HHTPS
+Use HTTPS
 
 Click Generate git credentials
 
