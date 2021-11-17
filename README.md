@@ -1,10 +1,10 @@
 # Hack Day 1 Boilerplate
 
 ## Branch Repository
-Click on master, and in the dropdown create a new branch named after your team name
+Click on master, and in the dropdown create a new branch named after your team name (only one person should do this!)
 
-##Clone Repository
-In your new branch, click Clone
+##Clone Repository & Setup
+In your new branch, click *Clone* button
 
 Use HTTPS
 
@@ -12,7 +12,16 @@ Click Generate git credentials
 
 COPY THE PASSWORD
 
-Use the HTTP URL to clone locally (or use Clone in VS Code if you know how...)
+Use the HTTP URL to clone locally and setup environment:
+1. Open VS Code
+2. Click on Terminal to open a new terminal using **Powershell**
+3. Clone the Repository (git clone https....etc)
+4. Navigate to the **hack-day-1-boilerplate** folder and switch to the new branch (git checkout branchname)
+5. In VSCode, select File > Open folder
+6. Navigate to where your repository folder **hack-day-1-boilerplate** is and click open
+7. Open a new terminal and switch the terminal to **Ubuntu (WSL)**
+8. Navigate to the hack-day-1 folder if you are not in it
+9. run _sudo apt install npm_
 
 ## Build Setup
 
