@@ -38,6 +38,10 @@ sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
 
 Uninstall and reinstall WSL
 
+**'bash/r' : No such file or directory**
+
+You might have 2 versions of Ubuntu installed....
+
 
 ## Build Setup
 
