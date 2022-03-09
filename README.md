@@ -21,7 +21,7 @@ Use the HTTP URL to clone locally and setup environment:
 6. Navigate to where your repository folder **hack-day-1-boilerplate** is and click open
 7. Open a new terminal in VS Code and switch the terminal to **Ubuntu (WSL)** (to the right of the Powershell text, click the down arrow next to the plus sign to select)
 8. Navigate to the hack-day-1 folder if you are not in it
-9. run _sudo apt install npm_
+9. run the command _sudo apt install npm_
 
 ##Errors?
 try _sudo apt-get update_
