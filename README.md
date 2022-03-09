@@ -23,7 +23,7 @@ Use the HTTP URL to clone locally and setup environment:
 8. Navigate to the hack-day-1 folder if you are not in it
 9. run _sudo apt install npm_
 
-##Errors?##
+##Errors?
 try _sudo apt-get update_
 
 **DNS issues?** 
