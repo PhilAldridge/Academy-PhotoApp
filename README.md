@@ -1,7 +1,7 @@
 # Hack Day 1 Boilerplate
 
 ## Branch Repository
-Click on master, and in the dropdown create a new branch named after your team name (only one person should do this!)
+Click on master - one person should create a develop branch for your team
 
 ##Clone Repository & Setup
 In your new branch, click *Clone* button
@@ -19,9 +19,21 @@ Use the HTTP URL to clone locally and setup environment:
 4. Navigate to the **hack-day-1-boilerplate** folder and switch to the new branch (git checkout branchname)
 5. In VSCode, select File > Open folder
 6. Navigate to where your repository folder **hack-day-1-boilerplate** is and click open
-7. Open a new terminal and switch the terminal to **Ubuntu (WSL)**
+7. Open a new terminal in VS Code and switch the terminal to **Ubuntu (WSL)** (to the right of the Powershell text in the botttom, click the down arrow to select)
 8. Navigate to the hack-day-1 folder if you are not in it
 9. run _sudo apt install npm_
+
+##Errors?##
+try _sudo apt-get update_
+
+**DNS issues?** 
+sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+sudo bash -c 'echo "[network]" > /etc/wsl.conf'
+sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
+
+**Are you root user?**
+Uninstall and reinstall WSL
+
 
 ## Build Setup
 
