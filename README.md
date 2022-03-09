@@ -27,11 +27,15 @@ Use the HTTP URL to clone locally and setup environment:
 try _sudo apt-get update_
 
 **DNS issues?** 
+
 sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+
 sudo bash -c 'echo "[network]" > /etc/wsl.conf'
+
 sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
 
 **Are you root user?**
+
 Uninstall and reinstall WSL
 
 
