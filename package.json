@@ -1,6 +1,6 @@
 {
   "name": "hack-day-1-boilerplate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -13,20 +13,19 @@
     "prettier-fix-all": "prettier --ignore-path .gitignore --write ."
   },
   "dependencies": {
-    "axios": "^0.20.0",
-    "nuxt": "^2.14.0"
+    "axios": "^0.27.2",
+    "nuxt-edge": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^3.1.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.5.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-nuxt": "^1.0.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "node-sass": "^4.14.1",
-    "prettier": "^2.0.5",
-    "sass-loader": "^10.0.1"
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.17.10",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "eslint": "^8.15.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^10.1.1",
+    "webpack": "^4.46.0"
   }
 }
