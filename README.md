@@ -1,10 +1,11 @@
 # Hack Day 1 Boilerplate
 
 ## Branch Repository
+
 Click on master - one person should create a develop branch for your team
 
 ##Clone Repository & Setup
-In your new branch, click *Clone* button
+In your new branch, click _Clone_ button
 
 Use HTTPS
 
@@ -13,6 +14,7 @@ Click **Generate git credentials**
 COPY THE PASSWORD
 
 Use the HTTP URL to clone locally and setup environment:
+
 1. Open VS Code
 2. Click on Terminal to open a new terminal using **Powershell** (NOTE: You can clone this in WSL if you need hot reload to work)
 3. Clone the Repository (git clone https....etc)
@@ -26,7 +28,7 @@ Use the HTTP URL to clone locally and setup environment:
 ##Errors?
 try _sudo apt-get update_
 
-**DNS issues?** 
+**DNS issues?**
 
 sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
 
@@ -41,7 +43,6 @@ Uninstall and reinstall WSL
 **'bash/r' : No such file or directory**
 
 You might have 2 versions of Ubuntu installed....
-
 
 ## Build Setup
 

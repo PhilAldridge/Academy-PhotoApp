@@ -9,28 +9,29 @@
 </template>
 
 <script>
-import academyImage from '@/assets/img/academy.png'
+import academyImage from "@/assets/img/academy.png";
 
 export default {
-  name: 'Banner',
+  name: "Banner",
+  data() {
+    return {
+      image: academyImage,
+    };
+  },
   props: {
-    image: {
-      type: String,
-      default: academyImage,
-    },
     title: {
       type: String,
-      default: '',
+      default: "",
     },
     message: {
       type: String,
-      default: '',
+      default: "",
     },
   },
-}
+};
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .banner {
   position: relative;
   text-align: center;
