@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header-container">
-      <h2 class="header-title">{{ title }}</h2>
+      <h2 class="header-title">{{ title }} abc</h2>
       <div class="nav">
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
@@ -13,17 +13,17 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   props: {
     title: {
       type: String,
-      default: 'Default Header Title',
+      default: "Default Header Title",
     },
   },
-}
+};
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .header-title {
   margin: 0px;
 }
@@ -49,7 +49,7 @@ a {
 }
 
 .nuxt-link-exact-active {
-  color: $bjss-house-colour;
+  color: var(--bjss-house-color);
   text-decoration: underline;
 }
 
@@ -59,7 +59,7 @@ a {
   height: 50px;
   margin-top: 0px;
   border-bottom: 1px solid #1b2e61;
-  box-shadow: 0 5px 5px -5px $bjss-house-colour;
+  box-shadow: 0 5px 5px -5px var(--bjss-house-color);
   margin: -50px auto 10px;
 }
 </style>

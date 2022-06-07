@@ -9,21 +9,21 @@
 
 <script>
 export default {
-  name: 'ContentTile',
+  name: "ContentTile",
   props: {
     title: {
       type: String,
-      default: 'Default Title',
+      default: "Default Title",
     },
     text: {
       type: String,
-      default: 'Default Text',
+      default: "Default Text",
     },
   },
-}
+};
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .tile-wrapper {
   width: 220px;
   height: 240px;
@@ -34,7 +34,7 @@ export default {
 
 .tile-wrapper:hover {
   background-color: whitesmoke;
-  border-color: $bjss-house-colour;
+  border-color: var(--bjss-house-color);
 }
 
 .tile-content {
