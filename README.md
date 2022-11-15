@@ -53,6 +53,10 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
+# if you get an error digital envelope routines::unsupported
+# open a powershell terminal in VS Code
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+
 # build the application and generate every route as a HTML file (used for static hosting).
 $ npm run generate
 
