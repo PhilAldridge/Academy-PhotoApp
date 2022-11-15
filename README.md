@@ -54,8 +54,10 @@ $ npm install
 $ npm run dev
 
 # if you get an error digital envelope routines::unsupported
-# open a powershell terminal in VS Code
+# if you have cloned into Windows in the terminal in VS Code use 
 $env:NODE_OPTIONS = "--openssl-legacy-provider"
+#else if you have cloned into WSL on the command line terminal in VS Code use
+export NODE_OPTIONS=--openssl-legacy-provider
 
 # build the application and generate every route as a HTML file (used for static hosting).
 $ npm run generate
