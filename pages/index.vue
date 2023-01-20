@@ -29,7 +29,7 @@ export default {
     return {
       tiles: [
         {
-          title: "A tile Bruno",
+          title: "A tile",
           text: "This is a reusable component.",
         },
         {
