@@ -44,6 +44,20 @@ Uninstall and reinstall WSL
 
 You might have 2 versions of Ubuntu installed....
 
+**error digital envelope routines::unsupported**
+
+if you have cloned into Windows in the terminal in VS Code use 
+
+```bash
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
+if you have cloned into WSL on the command line terminal in VS Code use
+
+```bash
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
 ## Build Setup
 
 ```bash
@@ -53,11 +67,7 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# if you get an error digital envelope routines::unsupported
-# if you have cloned into Windows in the terminal in VS Code use 
-$env:NODE_OPTIONS = "--openssl-legacy-provider"
-#else if you have cloned into WSL on the command line terminal in VS Code use
-export NODE_OPTIONS=--openssl-legacy-provider
+# digital envelope error? See preceding instructions about node options
 
 # build the application and generate every route as a HTML file (used for static hosting).
 $ npm run generate
