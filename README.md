@@ -19,11 +19,9 @@ Use the HTTP URL to clone locally and setup environment:
 2. Click on Terminal to open a new terminal (this should be WSL), and make sure you are in your HOME directory (cd ~ to make sure)
 3. Clone the Repository (git clone https....etc)
 4. Navigate to the **hack-day-1-boilerplate** folder and switch to the new branch (git checkout branchname)
-5. In VSCode, select File > Open folder
-6. Navigate to where your repository folder **hack-day-1-boilerplate** is and click open
-7. Open a new terminal in VS Code
-8. Navigate to the hack-day-1 folder if you are not in it
-9. run the command _sudo apt install npm_
+5. Type ```code .``` and press enter to open VS Code
+6. Open a new Terminal (ensure it's **bash*** or **WSL**) and run the command _sudo apt install npm_
+7. If you have had no problems, go to the **Build Setup** section
 
 ##Errors?
 try _sudo apt-get update_
@@ -44,15 +42,33 @@ Uninstall and reinstall WSL
 
 You might have 2 versions of Ubuntu installed....
 
+**error digital envelope routines::unsupported**
+
+if you have cloned into Windows in the terminal in VS Code use 
+
+```bash
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
+if you have cloned into WSL on the command line terminal in VS Code use
+
+```bash
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
 ## Build Setup
 
+Run the following to install dependencies an open your site locally
 ```bash
 # install dependencies
 $ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
+```
 
+To generate a static site and deploy, you can use the following commands (once you have an S3 bucket setup)
+```bash
 # build the application and generate every route as a HTML file (used for static hosting).
 $ npm run generate
 
