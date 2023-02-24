@@ -21,8 +21,6 @@
 </template>
 
 <script>
-import { apiGet } from "@/utils/api";
-
 export default {
   name: "IndexPage",
   data() {
@@ -53,7 +51,7 @@ export default {
   },
   methods: {
     fetchGreeting() {
-      apiGet("/hello-world")
+      fetchWrapper.get("https://url.to/your-image-repository")
         .then(({ data }) => (this.apiResponse = JSON.stringify(data)))
         .catch(
           () => (this.apiResponse = "Failed to retrieve data from server.")

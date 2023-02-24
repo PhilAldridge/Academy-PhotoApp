@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header title="BJSS Hack Day 1" />
-    <Nuxt />
+    <slot /> <!--This is the magic - all content appears in this slot element-->
   </div>
 </template>
 
