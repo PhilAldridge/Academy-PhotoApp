@@ -15,8 +15,8 @@ COPY THE PASSWORD
 
 Use the HTTP URL to clone locally and setup environment:
 
-1. Open VS Code
-2. Click on Terminal to open a new terminal (this should be WSL), and make sure you are in your HOME directory (cd ~ to make sure)
+1. Open Ubuntu
+2. Make sure you are in your HOME directory (cd ~ to make sure)
 3. Clone the Repository (git clone https....etc)
 4. Navigate to the **hack-day-1-boilerplate** folder and switch to the new branch (git checkout branchname)
 5. Type ```code .``` and press enter to open VS Code
