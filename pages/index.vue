@@ -50,12 +50,12 @@ export default {
     this.fetchGreeting();
   },
   methods: {
-    fetchGreeting() {
-      fetchWrapper.get("https://url.to/your-image-repository")
-        .then(({ data }) => (this.apiResponse = JSON.stringify(data)))
-        .catch(
-          () => (this.apiResponse = "Failed to retrieve data from server.")
-        );
+    async fetchGreeting() {
+      try {
+        this.apiResponse = await fetchWrapper.get("your://url.to/api/goes/here");
+      } catch (error) {
+        this.apiResponse = "Failed to retrieve data from server.";
+      }
     },
   },
 };
