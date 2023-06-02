@@ -107,6 +107,9 @@ const data = {
       fileName: the_filename,
     };
 ```
+
+NOTE: Your base64 encoded image should not include "data:image/png;base64,"!!!!!
+
 The endpoint is the same as before:
 
 ```
