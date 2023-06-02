@@ -83,37 +83,40 @@ $ npm run deploy
 Perform a GET Request
 
 ```
-https://ck7f3w6408.execute-api.eu-west-1.amazonaws.com/IL/teams/{teamName}/files
+https://bjssacademyhackday.azurewebsites.net/IL/teams/{teamname}/files
 ```
 
-Response will be a list of images
+Response will be a list of images (if there are any in your storage)
 
 ```js
 {
   "data": [
-    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/david-marcu-78A265wPiO4-unsplash.jpg",
-    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/jay-mantri-TFyi0QOx08c-unsplash.jpg",
-    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg",
-    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/mountain-landscape-2031539_1280.jpg",
-    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/niko-photos-tGTVxeOr_Rs-unsplash.jpg",
-    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/road-1072823_1280.jpg",
-    "https://gradhack-2020.s3-eu-west-1.amazonaws.com/example/sean-o-KMn4VEeEPR8-unsplash.jpg"
+    "https://bjssacademyhackday.blob.core.windows.net/files/{teamname}/image1.jpg",
+    "https://bjssacademyhackday.blob.core.windows.net/files/{teamname}/image2.jpg",
   ]
 }
 ```
 
 ### Uploading image
 
-Perform a POST Request, where the body is a base64 encoded image
+Perform a POST Request with a JSON body, where the file is a base64 encoded image:
+
+```js
+const data = {
+      file: base64_encoded_image,
+      fileName: the_filename,
+    };
+```
+The endpoint is the same as before:
 
 ```
-https://ck7f3w6408.execute-api.eu-west-1.amazonaws.com/IL/teams/{teamName}/files/{fileName}
+https://bjssacademyhackday.azurewebsites.net/IL/teams/{teamName}/files
 ```
 
-Response will be an object with a key of success, where the value will indicate whether your upload succeeded or not
+Response will be an object with a key of url
 
 ```js
 {
-  "success": true
+  "url": "https://bjssacademyhackday.blob.core.windows.net/files/atari/image3.png"
 }
 ```
