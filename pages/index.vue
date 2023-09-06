@@ -17,7 +17,7 @@
       />
     </div>
     <br />
-    <div v-if="apiResponse">Server response: {{ apiResponse }}</div>
+    <!-- <div v-if="apiResponse">Server response: {{ apiResponse }}</div> -->
   </div>
 </template>
 
