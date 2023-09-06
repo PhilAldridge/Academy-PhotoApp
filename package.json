@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy": "npm run generate && cd .output/public && aws s3 sync . s3://BUCKET_NAME --profile default"
+    "deploy": "npm run generate && cd .output/public && aws s3 sync . s3://commodore-testbucket --profile default"
   },
   "devDependencies": {
     "nuxt": "^3.0.0"
