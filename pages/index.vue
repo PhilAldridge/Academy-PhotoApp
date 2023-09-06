@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <!-- <Banner
+    <Banner
       class="home-banner"
       title="Welcome to the BJSS Academy!"
       message="This is a simple Vue app demonstrating components, routing and API calls."
-    /> -->
+    />
     <div class="tiles">
       <ContentTile @click="fetchGreeting()"
         v-for="apiResponseItem in apiResponse.data"
@@ -88,10 +88,10 @@ export default {
   display: flex;
   flex-direction: column;
 }
- 
+
 .home-banner {
   margin-bottom: 35px;
-} 
+}
 
 .tiles {
   display: flex;

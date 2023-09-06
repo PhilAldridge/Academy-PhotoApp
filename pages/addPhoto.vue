@@ -5,6 +5,15 @@
 
         <input type = 'file' ondrop id="photo_uploaded" @change = "handleFileUpload" @drop="drop(event)" @dragover="allowDrop(event)" accept = ".jpg,.jpeg,.png,.webp,.gif" multiple>
         <button @click = "savePhoto()">submit</button>
+<h3>{{ message }}</h3>
+        <div class="tiles">
+      <ContentTile @click="fetchGreeting()"
+        v-for="apiResponseItem in this.addedFiles"
+        :imgsrc="apiResponseItem"
+        class="tile"
+      />
+      <div class="tile"></div>
+    </div>
     </div>
 </template>
 
@@ -21,15 +30,15 @@ export default {
   name: "addPhoto",
   data(){
     return{
-        selectedFile: ""
+        selectedFile: "",
+        addedFiles: [],
+        message:""
     }
   },
   methods: {
    
     handleFileUpload(event){
         // event.preventDefault()
-        //console.log(this.selectedFile)
-        console.log(event.target.files.length)
         for(let i =0; i<event.target.files.length; i++){
             this.selectedFile = event.target.files[i]
             
@@ -37,11 +46,8 @@ export default {
             reader.onloadend = ()=>{
             encodedImg.push(reader.result);
             listFiles.push(event.target.files[i]);
-            console.log()
         }
         reader.readAsDataURL(event.target.files[i])
-        console.log(encodedImg[i])
-        console.log(listFiles[i])
         }
         
         // console.log(event.target.files[0])
@@ -64,14 +70,49 @@ export default {
                 ).then((res) =>{
                     this.selectedFile = "";
                     const returnUrl = res.data.split("'")[3];
+                    this.addedFiles.push(returnUrl);
                 }
                 )
         }
-        alert(encodedImg.length + " Picture/s Uploaded Successfully!")
+        this.message = "You successfully uploaded these photos!"
         encodedImg = []
         listFiles = []
-    }
+    },
+    
 }
 
 };
 </script>
+
+<style scoped>
+.home {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.home-banner {
+  margin-bottom: 35px;
+} 
+
+.tiles {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+}
+
+
+.tile {
+  display: flex;
+  flex-grow: 1;
+  margin: 10px;
+  align-content: center;
+  vertical-align:center;
+  cursor: pointer;
+}
+
+.tile:last-child{
+  flex-grow: 10;
+}
+</style>
