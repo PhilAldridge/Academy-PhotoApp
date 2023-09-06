@@ -3,6 +3,7 @@
     <div class="tile-content">
       <div class="tile-title">{{ title }}</div>
       <div class="tile-text">{{ text }}</div>
+      <img :src="image" />
     </div>
   </div>
 </template>
@@ -19,6 +20,9 @@ export default {
       type: String,
       default: "Default Text",
     },
+    image: {
+      type: String,
+    }
   },
 };
 </script>

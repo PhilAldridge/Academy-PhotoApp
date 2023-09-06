@@ -9,7 +9,7 @@
     <div class="tiles">
       <ContentTile
         v-for="tile in apiResponse.data"
-        :key="tile.title + '-tile'"
+        :key="tile + '-tile'"
         :title="tile"
         :text="tile"
         :image="tile"
