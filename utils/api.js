@@ -7,8 +7,10 @@ export const fetchWrapper = {
 
 function request(method) {
     return (url, body) => {
-        const requestOptions = {
-            method
+        let requestOptions = {
+            method,
+            headers: {},
+            body: {},
         };
         if (body) {
             requestOptions.headers['Content-Type'] = 'application/json';
