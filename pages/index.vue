@@ -8,10 +8,11 @@
 
     <div class="tiles">
       <ContentTile
-        v-for="tile in tiles"
+        v-for="tile in apiResponse.data"
         :key="tile.title + '-tile'"
-        :title="tile.title"
-        :text="tile.text"
+        :title="tile"
+        :text="tile"
+        :image="tile"
         class="tile"
       />
     </div>
@@ -25,25 +26,7 @@ export default {
   name: "IndexPage",
   data() {
     return {
-      tiles: [
-        {
-          title: "A tile",
-          text: "This is a reusable component.",
-        },
-        {
-          title: "Another tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla purus eget nibh venenatis.",
-        },
-        {
-          title: "A third tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, nibh id faucibus egestas.",
-        },
-        {
-          title: "A fourth tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, nibh id faucibus egestas.",
-        },
-      ],
-      apiResponse: "",
+      apiResponse: {},
     };
   },
   mounted() {
