@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import academyImage from "@/assets/img/academy.png";
+import academyImage from "@/assets/img/AcademyImage.png";
 
 export default {
   name: "Banner",
