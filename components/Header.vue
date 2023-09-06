@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header-container">
-      <!-- <h2 class="header-title">{{ title }}</h2> -->
+      <h2 class="header-title">{{ "Wedding" }}</h2> 
       <div class="nav-home">
         <nuxt-link to="/">Sam and Joe's Wedding</nuxt-link>
       </div>
@@ -10,7 +10,9 @@
       </div>
       
     </div>
-    <!-- <hr class="header-divider" /> -->
+    <div class="header-divider">
+      
+    </div>
   </div>
 </template>
 
@@ -24,10 +26,11 @@ export default {
     },
   },
 };
+
 </script>
 
 <style scoped>
-.header-title {
+.page-title {
   margin: 0px;
 }
 
@@ -68,9 +71,18 @@ a {
   border: none;
   width: 100%;
   height: 50px;
-  margin-top: 0px;
-  border-bottom: 1px solid #1b2e61;
-  box-shadow: 0 5px 5px -5px var(--bjss-house-color);
-  margin: -50px auto 10px;
+  margin-top: 10px;
+  border-bottom: 2px solid #4c956c;
+  margin: -50px auto 10px; 
+}
+
+.header-title {
+  font-size: 20px;
+  position: absolute;
+  height: 100px;
+  right: 20px;
+  top: 20px;
 }
 </style>
+
+
