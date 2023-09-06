@@ -52,7 +52,7 @@ export default {
   methods: {
     async fetchGreeting() {
       try {
-        this.apiResponse = await fetchWrapper.get("your://url.to/api/goes/here");
+        this.apiResponse = await fetchWrapper.get("https://bjssacademyhackday.azurewebsites.net/IL/teams/sinclair/files");
       } catch (error) {
         this.apiResponse = "Failed to retrieve data from server.";
       }
