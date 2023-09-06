@@ -3,8 +3,11 @@
     <div class="header-container">
       <h2 class="header-title">{{ title }}</h2>
       <div class="nav">
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/upload"> Upload</nuxt-link>
+        <nuxt-link to="/view"> Gallery</nuxt-link>
+        <nuxt-link to="/"> Account </nuxt-link>
+        <nuxt-link to="/about">Download Our App</nuxt-link>
+        
       </div>
     </div>
     <hr class="header-divider" />
@@ -33,7 +36,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: ghostwhite;
+  background-color: #6AA0D7;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .nav {
@@ -44,7 +49,6 @@ export default {
 
 a {
   font-weight: bold;
-  color: #2c3e50;
   text-decoration: none;
 }
 
@@ -62,4 +66,19 @@ a {
   box-shadow: 0 5px 5px -5px var(--bjss-house-color);
   margin: -50px auto 10px;
 }
+
+.header-container a {
+  padding: 0 10%;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header-container a:hover {
+  background-color: grey;
+}
+
+.header-container a:active{
+  background-color: black;
+}
+
 </style>

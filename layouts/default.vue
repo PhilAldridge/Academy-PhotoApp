@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header title="BJSS Hack Day 1" />
+    <Header title="ShareVault" />
     <slot /> <!--This is the magic - all content appears in this slot element-->
   </div>
 </template>
