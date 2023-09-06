@@ -2,8 +2,8 @@
   <div class="home">
     <Banner
       class="home-banner"
-      title="Welcome to the BJSS Academy!"
-      message="This is a simple Vue app demonstrating components, routing and API calls."
+      title="Welcome to the BJSS Gallery!"
+      message="This Gallery was created by team Sinclair in order for BJSS users to upload and store photos."
     />
 
     <div class="tiles">
