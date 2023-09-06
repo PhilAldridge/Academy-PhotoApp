@@ -1,8 +1,8 @@
 <template>
   <div class="tile-wrapper clickable">
     <div class="tile-content">
-      <div class="tile-title">{{ title }}</div>
-      <div class="tile-text">{{ text }}</div>
+
+      <img class="thumbnail" :src=imgsrc />
     </div>
   </div>
 </template>
@@ -19,14 +19,19 @@ export default {
       type: String,
       default: "Default Text",
     },
+    imgsrc: {
+      type: String,
+      default: "https://metro-orthodontics.co.uk/wp-content/uploads/2016/09/wedding-header-image.jpg"
+    }
   },
 };
 </script>
 
 <style scoped>
 .tile-wrapper {
-  width: 220px;
-  height: 240px;
+  min-width: 220px;
+  max-width: 400px;
+  min-height: 240px;
   border: 1.5px solid dimgrey;
   border-radius: 25px;
   transition: 0.3s;

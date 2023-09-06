@@ -5,6 +5,7 @@
       <div class="nav">
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/upload">Upload</nuxt-link>
       </div>
     </div>
     <hr class="header-divider" />
