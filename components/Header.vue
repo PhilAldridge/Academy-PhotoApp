@@ -1,14 +1,18 @@
 <template>
   <div>
     <div class="header-container">
-      <h2 class="header-title">{{ title }}</h2>
-      <div class="nav">
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
-        <nuxt-link to="/addPhoto">Add Photo</nuxt-link>
+      <h2 class="header-title">{{ "Wedding" }}</h2> 
+      <div class="nav-home">
+        <nuxt-link to="/">Sam and Joe's Wedding</nuxt-link>
       </div>
+      <div class="nav-add-photo">
+        <nuxt-link to="/addPhoto">+</nuxt-link>
+      </div>
+      
     </div>
-    <hr class="header-divider" />
+    <div class="header-divider">
+      
+    </div>
   </div>
 </template>
 
@@ -22,26 +26,35 @@ export default {
     },
   },
 };
+
 </script>
 
 <style scoped>
-.header-title {
+.page-title {
   margin: 0px;
 }
 
 .header-container {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: ghostwhite;
-}
+  padding: 40px;
+} 
 
-.nav {
-  width: 200px;
-  display: flex;
-  justify-content: space-evenly;
-}
+ .nav-add-photo {
+  font-size: 40px;
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  
+} 
+
+.nav-home {
+  
+  font-size: 25px;
+  position: absolute;
+  height: 100px;
+  right: 20px;
+  top: 10px;
+  
+} 
 
 a {
   font-weight: bold;
@@ -58,9 +71,18 @@ a {
   border: none;
   width: 100%;
   height: 50px;
-  margin-top: 0px;
-  border-bottom: 1px solid #1b2e61;
-  box-shadow: 0 5px 5px -5px var(--bjss-house-color);
-  margin: -50px auto 10px;
+  margin-top: 10px;
+  border-bottom: 2px solid #4c956c;
+  margin: -50px auto 10px; 
+}
+
+.header-title {
+  font-size: 20px;
+  position: absolute;
+  height: 100px;
+  right: 20px;
+  top: 20px;
 }
 </style>
+
+

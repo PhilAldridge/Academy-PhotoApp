@@ -7,6 +7,8 @@
         <img @click="hideImage" class="thumbnail" :src=imgsrc />
       </div>
     </div>
+
+    
   </div>
 </template>
 
@@ -50,16 +52,21 @@ export default {
 
 <style scoped>
 .tile-wrapper {
-  min-width: 220px;
-  max-width: 400px;
-  min-height: 240px;
   border: 1.5px solid dimgrey;
   border-radius: 25px;
   transition: 0.3s;
+  vertical-align: center;
+  height: fit-content;
+  width:fit-content;
+  max-width: 30%;
+  flex-grow: 1;
 }
 
+.tile-wrapper:last-child {
+  flex-grow: 10;
+}
 .tile-wrapper:hover {
-  background-color: whitesmoke;
+  background-color: rgb(111, 111, 111);
   border-color: var(--bjss-house-color);
 }
 
@@ -67,6 +74,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  width: 100%;
 }
 
 .tile-title {
