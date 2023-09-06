@@ -4,6 +4,9 @@
         <input type="file" name="" id="" />
       </div>
     </div>
+    <div class="send-file">
+        <button class="button" type="button">Upload</button> 
+      </div>
   </template>
    
   <style scoped>
@@ -21,6 +24,14 @@
     align-items: center;
     justify-content: center;
     border: 2px dashed #ccc;
-    margin-top: 40px;
+    margin-top: 40px; 
   }
+  .button {
+    height: 20px;
+    width: 60px;
+    position: relative;
+    bottom: 350px;
+    right: 275px
+  }
+
   </style>

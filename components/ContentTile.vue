@@ -27,7 +27,7 @@ export default {
 .tile-wrapper {
   width: 220px;
   height: 240px;
-  border: 1.5px solid dimgrey;
+  border: 3px solid dimgrey;
   border-radius: 25px;
   transition: 0.3s;
 }

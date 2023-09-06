@@ -2,8 +2,8 @@
   <div class="home">
     <Banner
       class="home-banner"
-      title="Welcome to the BJSS Academy!"
-      message="This is a simple Vue app demonstrating components, routing and API calls."
+      title="Secure Cloud Storage For Businesses"
+      message="Welcome to your account, Rebecca!."
     />
 
     <div class="tiles">
@@ -27,20 +27,20 @@ export default {
     return {
       tiles: [
         {
-          title: "A tile",
-          text: "This is a reusable component.",
+          title: "BJSS Hackathon - Day 1",
+          text: "293 Photos",
         },
         {
-          title: "Another tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla purus eget nibh venenatis.",
+          title: "BJSS Academy Social",
+          text: "26 Photos",
         },
         {
-          title: "A third tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, nibh id faucibus egestas.",
+          title: "First day at the Academy",
+          text: "59 Photos",
         },
         {
-          title: "A fourth tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, nibh id faucibus egestas.",
+          title: "Staff Weekend Away",
+          text: " 123 Photos",
         },
       ],
       apiResponse: "",
