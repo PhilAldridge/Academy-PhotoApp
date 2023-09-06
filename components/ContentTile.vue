@@ -96,7 +96,7 @@ export default {
       z-index: 9999;
     }
 
-    .fullscreen-image img {
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
