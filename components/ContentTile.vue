@@ -1,8 +1,6 @@
 <template>
   <div class="tile-wrapper clickable">
     <div class="tile-content">
-      <div class="tile-title">{{ title }}</div>
-      <div class="tile-text">{{ text }}</div>
       <img :src="image" />
     </div>
   </div>
@@ -12,14 +10,6 @@
 export default {
   name: "ContentTile",
   props: {
-    title: {
-      type: String,
-      default: "Default Title",
-    },
-    text: {
-      type: String,
-      default: "Default Text",
-    },
     image: {
       type: String,
     }
