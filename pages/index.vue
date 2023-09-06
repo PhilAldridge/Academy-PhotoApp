@@ -1,10 +1,5 @@
 <template>
   <div class="home">
-    <Banner
-      class="home-banner"
-      title="Welcome to the BJSS Academy!"
-      message="This is a simple Vue app demonstrating components, routing and API calls."
-    />
     <div class="tiles">
       <ContentTile @click="fetchGreeting()"
         v-for="apiResponseItem in apiResponse.data"
