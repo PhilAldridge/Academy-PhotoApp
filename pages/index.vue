@@ -2,8 +2,8 @@
   <div class="home">
     <Banner
       class="home-banner"
-      title="Secure Cloud Storage For Businesses"
-      message="Welcome to your account, Rebecca!."
+      title="Welcome BJSS"
+      message="This is your secure cloud storage space"
     />
 
     <div class="tiles">
@@ -39,7 +39,7 @@ export default {
           text: "59 Photos",
         },
         {
-          title: "Staff Weekend Away",
+          title: "Staff Weekend",
           text: " 123 Photos",
         },
       ],
@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 .home {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -77,9 +77,15 @@ export default {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  font-family: arial;
 }
 
 .tile {
   margin-top: 10px;
+  background-color: #008195;
+  color: #F4F1F1;
+  border: none;
+  font-family: arial;
+  
 }
 </style>

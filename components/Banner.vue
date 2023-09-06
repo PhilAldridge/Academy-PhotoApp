@@ -1,6 +1,5 @@
 <template>
   <div class="banner">
-    <img :src="image" />
     <div class="text-overlay">
       <h2 v-if="title">{{ title }}</h2>
       <h4 v-if="message">{{ message }}</h4>
@@ -35,15 +34,14 @@ export default {
 .banner {
   position: relative;
   text-align: center;
-  color: white;
+  color: #F4F1F1;
+  font-family: arial;
   height: 235px;
   overflow: hidden;
+  background-color: #86B2BF;
 }
 
-img {
-  max-width: 100%;
-  filter: blur(4px);
-}
+
 
 .text-overlay {
   position: absolute;
