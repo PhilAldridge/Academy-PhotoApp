@@ -42,6 +42,23 @@ export default {
           title: "A fourth tile",
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, nibh id faucibus egestas.",
         },
+        {
+          title: "A fifth tile",
+          text: "Testing.",
+        },
+        {
+          title: "A sixth tile",
+          text: "Testing.",
+        },
+        {
+          title: "A seventh tile",
+          text: "Testing.",
+        },
+        {
+          title: "Another tile",
+          text: "Testing.",
+        },
+
       ],
       apiResponse: "",
     };
