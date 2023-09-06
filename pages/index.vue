@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="tiles">
-      <ContentTile @click="fetchGreeting()"
+      <ContentTile
         v-for="apiResponseItem in apiResponse.data"
         :imgsrc="apiResponseItem"
         class="tile"
