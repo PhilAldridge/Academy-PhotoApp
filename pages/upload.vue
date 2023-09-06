@@ -1,3 +1,5 @@
+
+
 <template>
   <div class="file-upload">
     <div class="file-upload__area">
@@ -7,17 +9,39 @@
 </template>
  
 <script>
+
+import { fetchWrapper } from "/utils/api.js"
+
   export default {
     methods: {
 
       uploadImage() {
         let rawImg;
+       
         const file = document.querySelector('input[type=file]').files[0];
         const reader = new FileReader();
-
+        
         reader.onloadend = () => {
           rawImg = reader.result;
-          console.log(rawImg);
+        
+         let trimmedRawImg = rawImg.substring(rawImg.indexOf(",") + 1)
+      
+
+        const data = {
+      file: trimmedRawImg,
+      fileName: file.name,
+      fileMimeType: '',
+    };
+
+          fetchWrapper.post('https://bjssacademyhackday.azurewebsites.net/IL/teams/commodore/files', data
+      
+      )
+        .then(data => {
+          console.log(data)
+        })
+        .catch(error => {
+          console.error(error)
+        });
         }
         reader.readAsDataURL(file);
         console.log('%cImage Upload Success!', 'background: #27e887; color: #ffffff');
