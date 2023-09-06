@@ -6,7 +6,7 @@
       message="This is a simple Vue app demonstrating components, routing and API calls."
     />
     <div class="tiles">
-      <ContentTile @click="fetchGreeting()"
+      <ContentTile
         v-for="apiResponseItem in apiResponse.data"
         :imgsrc="apiResponseItem"
         class="tile"

@@ -1,8 +1,11 @@
 <template>
   <div class="tile-wrapper clickable">
     <div class="tile-content">
-
-      <img class="thumbnail" :src=imgsrc />
+      <img @click="showImage" class="thumbnail" :src=imgsrc />
+      <div v-show="isImageVisible" class="fullscreen-image">
+        <span class="close-btn" @click="hideImage">&times;</span>
+        <img @click="hideImage" class="thumbnail" :src=imgsrc />
+      </div>
     </div>
   </div>
 </template>
@@ -24,6 +27,24 @@ export default {
       default: "https://metro-orthodontics.co.uk/wp-content/uploads/2016/09/wedding-header-image.jpg"
     }
   },
+  data() {
+    return {
+      isImageVisible: false,
+      imageUrl: this.imgsrc
+    }
+  },
+  methods: {
+    showImage() {
+      this.isImageVisible = true;
+      document.body.style.overflow ="hidden";
+  
+    },
+    hideImage() {
+      this.isImageVisible = false;
+      document.body.style.overflow ="auto";
+
+    }
+  }
 };
 </script>
 
@@ -53,4 +74,23 @@ export default {
   font-size: 20px;
   font-weight: bold;
 }
+
+.fullscreen-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .fullscreen-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 </style>
