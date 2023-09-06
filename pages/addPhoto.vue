@@ -1,8 +1,9 @@
 
 <template>
     <div class="addPhoto">
-        <h1>This is an about page</h1>
-        <input type = 'file' id="photo_uploaded" @change = "handleFileUpload">
+        <h1>Let's add some photos</h1>
+        
+        <input type = 'file' ondrop id="photo_uploaded" @change = "handleFileUpload" @drop="drop(event)" @dragover="allowDrop(event)">
         <button @click = "savePhoto()">submit</button>
     </div>
 </template>
@@ -44,12 +45,13 @@ export default {
         };
 
         console.log(formattedImg)
-    
+        let fileType = this.selectedFile.name.split(".")[this.selectedFile.name.split(".").length-1]
+        
         instance.post("https://bjssacademyhackday.azurewebsites.net/IL/teams/atari/files", {
             file: splitImg[1],
             fileName: this.selectedFile.name,
-            fileMimeType: "image/webp"}
-            ).then()
+            fileMimeType: "image/" + fileType}
+            ).then(this.selectedFile = "", alert("Pic Uploaded Successfully!"))
     }
 }
 
