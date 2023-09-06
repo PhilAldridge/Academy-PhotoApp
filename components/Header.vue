@@ -6,6 +6,9 @@
         <nuxt-link to="/">Home</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
       </div>
+      <div>
+        <img src="@/assets/img/BJSSAcademy.png" id="logo" alt="BJSS Logo" style="width:100px;height:60px;">
+      </div>
     </div>
     <hr class="header-divider" />
   </div>
@@ -62,4 +65,12 @@ a {
   box-shadow: 0 5px 5px -5px var(--bjss-house-color);
   margin: -50px auto 10px;
 }
+
+#logo {
+  padding-right: 10px;
+  padding-left: 50px;
+  margin-left: 60px;
+
+}
+
 </style>
