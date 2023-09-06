@@ -11,9 +11,9 @@
         :imgsrc="apiResponseItem"
         class="tile"
       />
+      <div class="tile"></div>
     </div>
     <br />
-    <div v-if="apiResponse">Server response: {{ apiResponse.data }}</div>
     
   </div>
 </template>
@@ -71,6 +71,7 @@ export default {
         async fetchGreeting() {
             try {
                 this.apiResponse = await fetchWrapper.get("https://bjssacademyhackday.azurewebsites.net/IL/teams/atari/files");
+    
             }
             catch (error) {
                 this.apiResponse = "Failed to retrieve data from server.";
@@ -94,11 +95,20 @@ export default {
 
 .tiles {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: space-between;
 }
 
+
 .tile {
-  margin-top: 10px;
+  display: flex;
+  flex-grow: 1;
+  margin: 10px;
+  align-content: center;
+  vertical-align:center;
+}
+
+.tile:last-child{
+  flex-grow: 10;
 }
 </style>
