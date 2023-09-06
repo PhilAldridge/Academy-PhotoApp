@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="header-container">
-      <h2 class="header-title">{{ "Wedding" }}</h2> 
+      <h2 class="header-title">{{ "Sam and Joe's Wedding"}}</h2> 
       <div class="nav-home">
-        <nuxt-link to="/">Sam and Joe's Wedding</nuxt-link>
+        <nuxt-link to="/">Save the Date</nuxt-link>
       </div>
       <div class="nav-add-photo">
         <nuxt-link to="/addPhoto">+</nuxt-link>
