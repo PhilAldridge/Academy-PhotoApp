@@ -5,19 +5,15 @@
       title="Welcome to the BJSS Academy!"
       message="This is a simple Vue app demonstrating components, routing and API calls."
     />
-    <Banner2
-    />
-
     <div class="tiles">
       <ContentTile @click="fetchGreeting()"
-        v-for="tile in tiles"
-        :key="tile.title + '-tile'"
-        :imgsrc="tile.imgsrc"
+        v-for="apiResponseItem in apiResponse.data"
+        :imgsrc="apiResponseItem"
         class="tile"
       />
     </div>
     <br />
-    <div v-if="apiResponse">Server response: {{ apiResponse }}</div>
+    <div v-if="apiResponse">Server response: {{ apiResponse.data }}</div>
     
   </div>
 </template>
@@ -25,42 +21,6 @@
 <script>
 
 export default {
-<<<<<<< HEAD
-  name: "IndexPage",
-  data() {
-    return {
-      tiles: [
-        {
-          title: "A tile",
-          text: "This is a reusable component.",
-        },
-        {
-          title: "Another tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla purus eget nibh venenatis.",
-        },
-        {
-          title: "A third tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, nibh id faucibus egestas.",
-        },
-        {
-          title: "A fourth tile",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus, nibh id faucibus egestas.",
-        },
-      ],
-      apiResponse: "",
-    };
-  },
-  mounted() {
-    this.fetchGreeting();
-  },
-  methods: {
-    async fetchGreeting() {
-      try {
-        this.apiResponse = await fetchWrapper.get("https://bjssacademyhackday.azurewebsites.net/IL/teams/atari/files");
-      } catch (error) {
-        this.apiResponse = "Failed to retrieve data from server.";
-      }
-=======
     name: "IndexPage",
     data() {
         return {
@@ -103,7 +63,6 @@ export default {
                 }]],
             apiResponse: "",
         };
->>>>>>> 480c6f63f8292df41fabda24257d31f656b2a95c
     },
     mounted() {
         this.fetchGreeting();
@@ -111,7 +70,7 @@ export default {
     methods: {
         async fetchGreeting() {
             try {
-                this.apiResponse = await fetchWrapper.get("your://url.to/api/goes/here");
+                this.apiResponse = await fetchWrapper.get("https://bjssacademyhackday.azurewebsites.net/IL/teams/atari/files");
             }
             catch (error) {
                 this.apiResponse = "Failed to retrieve data from server.";
