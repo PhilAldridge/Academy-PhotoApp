@@ -1,14 +1,16 @@
 <template>
   <div>
     <div class="header-container">
-      <h2 class="header-title">{{ title }}</h2>
-      <div class="nav">
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
-        <nuxt-link to="/addPhoto">Add Photo</nuxt-link>
+      <!-- <h2 class="header-title">{{ title }}</h2> -->
+      <div class="nav-home">
+        <nuxt-link to="/">Sam and Joe's Wedding</nuxt-link>
       </div>
+      <div class="nav-add-photo">
+        <nuxt-link to="/addPhoto">+</nuxt-link>
+      </div>
+      
     </div>
-    <hr class="header-divider" />
+    <!-- <hr class="header-divider" /> -->
   </div>
 </template>
 
@@ -30,18 +32,26 @@ export default {
 }
 
 .header-container {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: ghostwhite;
-}
+  padding: 40px;
+} 
 
-.nav {
-  width: 200px;
-  display: flex;
-  justify-content: space-evenly;
-}
+ .nav-add-photo {
+  font-size: 40px;
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  
+} 
+
+.nav-home {
+  
+  font-size: 25px;
+  position: absolute;
+  height: 100px;
+  right: 20px;
+  top: 10px;
+  
+} 
 
 a {
   font-weight: bold;
