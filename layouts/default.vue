@@ -20,7 +20,7 @@ body {
   margin: 0px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-align: right;
+  text-align: center;
   color: #452c50;
   overflow-y: scroll;
   
