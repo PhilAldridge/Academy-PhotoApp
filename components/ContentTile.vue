@@ -45,7 +45,7 @@ export default {
   flex-grow: 10;
 }
 .tile-wrapper:hover {
-  background-color: whitesmoke;
+  background-color: rgb(111, 111, 111);
   border-color: var(--bjss-house-color);
 }
 
@@ -53,7 +53,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: fit-content;
+  width: 100%;
 }
 
 .tile-title {

@@ -106,6 +106,7 @@ export default {
   margin: 10px;
   align-content: center;
   vertical-align:center;
+  cursor: pointer;
 }
 
 .tile:last-child{

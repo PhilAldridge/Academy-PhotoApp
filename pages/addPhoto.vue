@@ -61,7 +61,11 @@ export default {
                 file: splitImg[1],
                 fileName: listFiles[i].name,
                 fileMimeType: "image/" + fileType}
-                ).then(this.selectedFile = "")
+                ).then((res) =>{
+                    this.selectedFile = "";
+                    const returnUrl = res.data.split("'")[3];
+                }
+                )
         }
         alert(encodedImg.length + " Picture/s Uploaded Successfully!")
         encodedImg = []
