@@ -28,7 +28,6 @@ export default {
   width: 220px;
   height: 240px;
   border: 3px solid dimgrey;
-  border-radius: 25px;
   transition: 0.3s;
 }
 
@@ -41,11 +40,17 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  font-family: arial;
+}
+
+.tile:hover {
+  color: black;
 }
 
 .tile-title {
   padding-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
+  font-family: arial;
 }
 </style>

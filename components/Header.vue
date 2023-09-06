@@ -36,9 +36,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #6AA0D7;
-  color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #06358B;
+  font-family: britannic;
 }
 
 .nav {
@@ -48,7 +47,6 @@ export default {
 }
 
 a {
-  font-weight: bold;
   text-decoration: none;
 }
 
@@ -62,23 +60,22 @@ a {
   width: 100%;
   height: 50px;
   margin-top: 0px;
-  border-bottom: 1px solid #1b2e61;
-  box-shadow: 0 5px 5px -5px var(--bjss-house-color);
+  border-bottom: none;
   margin: -50px auto 10px;
 }
 
 .header-container a {
   padding: 0 10%;
-  color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1D0303;
+  font-family: arial;
 }
 
 .header-container a:hover {
-  background-color: grey;
+  color: grey;
 }
 
 .header-container a:active{
-  background-color: black;
+  color: black;
 }
 
 </style>

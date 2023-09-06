@@ -18,4 +18,9 @@ body {
   color: #2c3e50;
   overflow-y: scroll;
 }
+
+[title = "ShareVault"]{
+  font: britannic;
+  border: 3px solid black;
+}
 </style>
